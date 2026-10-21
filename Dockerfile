@@ -1,5 +1,7 @@
 FROM richarvey/nginx-php-fpm:latest
 
+# Copia tu configuración de CORS y sobrescribe la del sitio
+COPY nginx-cors.conf /var/www/html/conf/nginx/nginx-site.conf
 COPY . .
 
 ENV SKIP_COMPOSER 1
