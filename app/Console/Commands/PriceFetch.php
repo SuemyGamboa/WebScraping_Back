@@ -42,7 +42,7 @@ class PriceFetch extends Command
                 ]);
 
                 $producto->refresh();
-                $this->info("  Precio: $" . number_format($precio / 100, 2) . " MXN");
+                $this->info("  Precio: $" . number_format($precio, 2) . " MXN");
 
                 // Comprobar si se disparó la alerta
                 if ($producto->alerta_activa
